@@ -9,4 +9,4 @@ define('BASEDIR', __DIR__);
 include BASEDIR.'/Classes/Loader.php';
 spl_autoload_register('\\Classes\Loader::autoload');
 
-App\Controller\Home\Index::test();
+$db = Classes\Register::get('db1');
