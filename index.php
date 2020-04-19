@@ -9,14 +9,10 @@ define('BASEDIR', __DIR__);
 include BASEDIR.'/Classes/Loader.php';
 spl_autoload_register('\\Classes\Loader::autoload');
 
-$db = Classes\Register::get('db1');
+/*$db = Classes\Register::get('db1');
 
 class Page
 {
-    /*
-     * @var \Classes\UserStrategy
-     */
-
     protected $strategy;
     function index()
     {
@@ -42,4 +38,9 @@ if(isset($_GET['female'])) {
     $strategy = new \Classes\MaleUserStrategy();
 }
 $page->setStrategy($strategy);
-$page->index();
+$page->index();*/
+
+$user = new \Classes\User(1);
+
+var_dump($user->id, $user->mobile, $user->name, $user->regtime);
+exit;
